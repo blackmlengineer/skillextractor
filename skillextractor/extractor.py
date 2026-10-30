@@ -11,6 +11,7 @@ from typing import Any, Dict, List, Mapping, Optional, Sequence, Union
 
 import numpy as np
 
+from .classifier import DEFAULT_CLASSIFIER, SkillSentenceClassifier
 from .sentences import split_sentences
 from .taxonomies import (
     KNOWN_TAXONOMIES,
@@ -79,9 +80,14 @@ class SkillExtractor:
         batch_size: int = 64,
         device: Optional[str] = None,
         return_scores: bool = False,
+        use_classifier: bool = False,
+        classifier: Union[str, Any] = DEFAULT_CLASSIFIER,
+        classifier_threshold: float = 0.5,
     ) -> None:
         if not 0.0 <= threshold <= 1.0:
             raise ValueError("threshold must be between 0 and 1")
+        if not 0.0 <= classifier_threshold <= 1.0:
+            raise ValueError("classifier_threshold must be between 0 and 1")
         if on_missing not in ("warn", "raise"):
             raise ValueError("on_missing must be 'warn' or 'raise'")
         if phrase_field not in ("name", "description", "name+description"):
@@ -97,6 +103,14 @@ class SkillExtractor:
         self.phrase_field = phrase_field
         self.batch_size = batch_size
         self.return_scores = return_scores
+        self.classifier_threshold = classifier_threshold
+        self.classifier: Any = None
+        if use_classifier:
+            self.classifier = (
+                SkillSentenceClassifier(classifier, device=device, batch_size=batch_size)
+                if isinstance(classifier, str)
+                else classifier  # any object with score(list[str]) -> P(skill) array
+            )
         self.cache_dir = Path(cache_dir) if cache_dir else default_cache_dir()
         self._model_spec = model
         self._device = device
@@ -130,8 +144,36 @@ class SkillExtractor:
                 raise ImportError(
                     "sentence-transformers is required: pip install sentence-transformers"
                 ) from exc
+            self._check_cuda_available()
             self._model = SentenceTransformer(self._model_spec, device=self._device)
+            logger.info("Loaded %s on device: %s", self._model_spec, self.device)
+        elif self._device and hasattr(self._model, "to") and not isinstance(self._model_spec, str):
+            # A pre-built model object: honour the requested device once.
+            if not getattr(self, "_moved", False):
+                self._check_cuda_available()
+                self._model = self._model.to(self._device)
+                self._moved = True
         return self._model
+
+    def _check_cuda_available(self) -> None:
+        if not (self._device and str(self._device).startswith("cuda")):
+            return
+        try:
+            import torch
+        except ImportError:  # pragma: no cover
+            return
+        if not torch.cuda.is_available():
+            warnings.warn(
+                f"device='{self._device}' was requested but torch.cuda.is_available() is False "
+                f"(torch {torch.__version__}, built for CUDA {torch.version.cuda}). "
+                "You probably have a CPU-only PyTorch build; reinstall torch with CUDA support.",
+                stacklevel=3,
+            )
+
+    @property
+    def device(self) -> str:
+        """The device the model is actually running on (loads the model if needed)."""
+        return str(getattr(self.model, "device", "unknown"))
 
     def _encode(self, texts: List[str]) -> np.ndarray:
         model = self.model
@@ -188,6 +230,23 @@ class SkillExtractor:
             out["sentence"] = sentence
         return out
 
+    def _filter_skill_sentences(self, per_text: List[List[str]]) -> List[List[str]]:
+        """Keep only sentences the classifier labels as skill statements (LABEL_1)."""
+        flat = [s for sents in per_text for s in sents]
+        if not flat:
+            return per_text
+        probs = np.asarray(self.classifier.score(flat))
+        if probs.shape[0] != len(flat):
+            raise ValueError("classifier.score() must return one probability per sentence")
+        keep = probs >= self.classifier_threshold
+        logger.info("Classifier kept %d of %d sentences", int(keep.sum()), len(flat))
+        filtered: List[List[str]] = []
+        pos = 0
+        for sents in per_text:
+            filtered.append([s for s, k in zip(sents, keep[pos : pos + len(sents)]) if k])
+            pos += len(sents)
+        return filtered
+
     def extract(self, text: str, threshold: Optional[float] = None) -> Results:
         """Extract skills from one text. Returns ``{taxonomy: [[match, ...]]}``."""
         return self.batch_extract([text], threshold=threshold)
@@ -206,6 +265,8 @@ class SkillExtractor:
             raise ValueError("threshold must be between 0 and 1")
 
         per_text_sentences = [split_sentences(t or "") for t in texts]
+        if self.classifier is not None:
+            per_text_sentences = self._filter_skill_sentences(per_text_sentences)
         flat = [s for sents in per_text_sentences for s in sents]
         results: Results = {name: [[] for _ in texts] for name in self.taxonomies}
         if not flat:
