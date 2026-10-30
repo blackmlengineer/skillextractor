@@ -1,0 +1,140 @@
+id,name,description
+javascript,JavaScript,Multi-paradigm programming language for web development
+typescript,TypeScript,Typed superset of JavaScript that compiles to plain JavaScript
+python,Python,"High-level, interpreted programming language for general-purpose programming"
+java,Java,Object-oriented programming language widely used for enterprise applications
+go,Go,"Statically typed, compiled programming language designed for simplicity and efficiency"
+csharp,C#,Object-oriented programming language developed by Microsoft for .NET
+cpp,C++,General-purpose programming language with object-oriented features
+ruby,Ruby,"Dynamic, object-oriented scripting language focused on simplicity and productivity"
+rust,Rust,"Systems programming language focused on safety, concurrency, and performance"
+php,PHP,Popular server-side scripting language designed for web development
+swift,Swift,"Modern, safe, and fast programming language for Apple platforms"
+kotlin,Kotlin,"Modern, concise programming language for JVM, Android, and multiplatform development"
+r,R,Programming language and environment for statistical computing and graphics
+scala,Scala,Multi-paradigm language combining object-oriented and functional programming on JVM
+perl,Perl,High-level scripting language known for text processing and system administration
+haskell,Haskell,Purely functional programming language with strong static typing and lazy evaluation
+elixir,Elixir,Functional language built on Erlang VM for scalable and maintainable applications
+dart,Dart,"Client-optimized language for building apps on any platform, especially with Flutter"
+lua,Lua,"Lightweight, embeddable scripting language designed for extending applications"
+julia,Julia,"High-level, high-performance language for technical and scientific computing"
+shell,Shell Scripting,"Unix shell scripting for automation, system administration, and DevOps tasks"
+powershell,PowerShell,Task automation and configuration management framework from Microsoft
+react,React,JavaScript library for building user interfaces
+vue,Vue.js,Progressive JavaScript framework for building user interfaces
+angular,Angular,TypeScript-based web application framework
+html,HTML,Standard markup language for creating web pages and web applications
+css,CSS,Style sheet language for describing the presentation of web pages
+next_js,Next.js,React framework for production with server-side rendering and static generation
+tailwind_css,Tailwind CSS,Utility-first CSS framework for rapid UI development
+jquery,jQuery,"Fast, small JavaScript library simplifying HTML DOM manipulation"
+nuxtjs,Nuxt.js,Vue.js meta-framework for server-side rendering and static site generation
+nodejs,Node.js,JavaScript runtime built on Chrome's V8 engine for server-side development
+django,Django,High-level Python web framework for rapid development
+spring,Spring Boot,Java framework for building enterprise applications
+express,Express,"Fast, minimalist web framework for Node.js"
+rest_api,REST API,Architectural style for designing networked applications using HTTP
+api_design,API Design,Design and implementation of application programming interfaces
+api_integration,API Integration,Integration of external APIs and services into applications
+postgresql,PostgreSQL,Open-source relational database management system
+mongodb,MongoDB,Document-oriented NoSQL database
+sql,SQL,Standard language for managing and querying relational databases
+mysql,MySQL,Open-source relational database management system
+redis,Redis,"In-memory data structure store used as database, cache, and message broker"
+sql_server,SQL Server,Microsoft's relational database management system
+database_design,Database Design,"Designing database structures, schemas, and relationships"
+machine_learning,Machine Learning,Building models that learn from data to make predictions
+docker,Docker,"Platform for developing, shipping, and running applications in containers"
+kubernetes,Kubernetes,"Container orchestration platform for automating deployment, scaling, and management"
+aws,Amazon Web Services,Cloud computing platform offering various services
+git,Git,Distributed version control system for tracking changes in source code
+firebase,Firebase,Google's mobile and web application development platform
+github_actions,GitHub Actions,CI/CD and automation platform integrated with GitHub
+cicd,CI/CD,"Practices of automatically building, testing, and deploying code"
+devops,DevOps,Practice combining software development and IT operations for faster delivery
+deployment_pipelines,Deployment Pipelines,"Automated processes for building, testing, and deploying software"
+azure_devops,Azure DevOps,"Microsoft's DevOps platform providing CI/CD pipelines, repos, boards, and testing tools"
+release_management,Release Management,Managing software releases and deployments across environments
+wordpress,WordPress,Open-source content management system and website builder
+ios,iOS,Apple's mobile operating system and development platform
+android,Android,Google's mobile operating system and development platform
+xamarin,Xamarin,Cross-platform mobile development framework using C# and .NET
+jira,Jira,Issue and project tracking software for agile teams
+confluence,Confluence,Team collaboration and documentation software
+auth0,Auth0,Identity and access management platform for authentication and authorization
+stripe,Stripe,Payment processing platform for online businesses
+paypal,PayPal,Online payment system and payment processor
+github,GitHub,"Git repository hosting and collaboration platform with CI/CD, issues, and project management"
+bitbucket,Bitbucket,Git repository hosting and collaboration platform by Atlassian with CI/CD pipelines
+slack,Slack,"Team communication and collaboration platform with channels, integrations, and workflows"
+microsoft_teams,Microsoft Teams,"Microsoft's team collaboration and communication platform with chat, meetings, and file sharing"
+sonarqube,SonarQube,Code quality and security analysis platform for continuous inspection
+microsoft_project,Microsoft Project,"Microsoft's project management software for planning, scheduling, and resource allocation"
+iot,IoT,"Network of physical devices with sensors, software, and connectivity"
+arduino,Arduino,Open-source electronics platform for building hardware projects
+raspberry_pi,Raspberry Pi,Small single-board computer for embedded computing and prototyping
+embedded_systems,Embedded Systems,Computer systems designed for specific control functions within devices
+system_architecture,System Architecture,Designing structure and behavior of complex software systems
+modern_stack,Modern Stack,"Experience with modern, cloud-native technology stacks (React/Vue, Node.js/Python, PostgreSQL/MongoDB, AWS/GCP, Docker/Kubernetes)"
+performance_optimization,Performance Optimization,Improving software and system performance and efficiency
+fullstack_development,Full-Stack Development,Development across both frontend and backend technologies
+gcp,Google Cloud Platform,"Google's comprehensive cloud computing platform offering compute, storage, and services"
+azure,Microsoft Azure,"Microsoft's enterprise cloud computing platform for building, deploying, and managing applications"
+kafka,Apache Kafka,"Distributed event streaming platform for high-throughput, fault-tolerant data pipelines"
+rabbitmq,RabbitMQ,Open-source message broker software implementing Advanced Message Queuing Protocol
+elastic_stack,Elastic Stack,"Suite of open-source products for search, logging, and analytics (Elasticsearch, Logstash, Kibana)"
+data_pipelines,Data Pipelines,"Design and implementation of automated workflows for data extraction, transformation, and loading"
+distributed_systems,Distributed Systems,Design and implementation of systems that run across multiple networked computers
+microservices_architecture,Microservices Architecture,Architectural style structuring applications as collection of loosely coupled services
+event_driven_architecture,Event-Driven Architecture,"Architectural pattern promoting production, detection, and reaction to events"
+cloud_architecture,Cloud Architecture,Design and planning of cloud computing infrastructure and applications
+platform_architecture,Platform Architecture,Design and implementation of scalable technology platforms
+figma,Figma,"Collaborative interface design tool for creating, prototyping, and sharing designs"
+tensorflow,TensorFlow,Open-source machine learning framework for training and deploying ML models
+langchain,LangChain,Framework for developing applications powered by language models with chains and agents
+nlp,Natural Language Processing,Branch of AI focused on interaction between computers and human language
+computer_vision,Computer Vision,Field of AI that enables computers to interpret and understand visual information
+flutter,Flutter,Google's UI toolkit for building natively compiled applications from a single codebase
+mobile_development,Mobile Development,Development of applications for mobile devices
+prisma,Prisma,Next-generation Node.js and TypeScript ORM for type-safe database access
+flask,Flask,Lightweight Python web framework for building web applications and APIs
+rails,Ruby on Rails,Full-stack web framework for Ruby following convention over configuration
+laravel,Laravel,"Modern PHP web framework with expressive, elegant syntax for web applications"
+aspnet_core,ASP.NET Core,Cross-platform framework for building web applications and APIs
+dotnet,.NET,"Microsoft's developer platform for building applications across web, mobile, desktop, and cloud"
+jest,Jest,JavaScript testing framework focusing on simplicity and support for large applications
+pytest,Pytest,Mature full-featured Python testing framework for writing simple and scalable tests
+cypress,Cypress,"Fast, easy and reliable end-to-end testing framework for web applications"
+quality_assurance_strategy,Quality Assurance Strategy,Developing comprehensive quality assurance strategies for software products
+business_strategy,Business Strategy,Developing and executing business strategies to achieve goals
+digital_transformation,Digital Transformation,Integration of digital technology into all areas of business
+process_optimization,Process Optimization,Improving and optimizing business processes for efficiency and effectiveness
+risk_management,Risk Management,"Identifying, assessing, and mitigating business and project risks"
+financial_analysis,Financial Analysis,Analyzing financial data to support business decisions
+fundraising,Fundraising,Securing financial resources from investors or other sources
+pl_management,P&L Management,Management of profit and loss statements and financial performance
+b2b_sales,B2B Sales,Selling products or services to other businesses
+saas_sales,SaaS Sales,Selling software as a service products with subscription models
+digital_marketing,Digital Marketing,Marketing products or services using digital channels
+seo,SEO,Optimizing websites to rank higher in search engine results
+product_management,Product Management,Managing product development from conception to launch
+product_owner,Product Owner,Agile role responsible for maximizing product value and managing backlog
+agile,Agile,Iterative approach to project management and software development
+technical_project_management,Technical Project Management,Managing technical projects with understanding of engineering complexity
+kanban,Kanban,Agile project management methodology focused on visualizing work and continuous delivery
+scrum_master,Scrum Master,Agile role responsible for facilitating Scrum process and removing impediments for the team
+safe,SAFe,Scaled Agile Framework for implementing agile practices at enterprise scale
+team_leadership,Team Leadership,Leading and managing teams to achieve goals
+technical_leadership,Technical Leadership,Leading technical teams and driving technology strategy and architecture decisions
+team_building,Team Building,"Building, hiring, and scaling teams from 0 to N, creating team culture and processes"
+remote_async_work,Remote/Async Work,"Working effectively in remote and asynchronous environments, managing distributed teams across timezones"
+technical_due_diligence,Technical Due Diligence,Technical evaluation of companies for investment or acquisition
+change_management,Change Management,Managing organizational change and transformation initiatives effectively
+vendor_management,Vendor Management,Managing relationships and contracts with external vendors and service providers
+mentoring,Mentoring,Guiding and developing others through knowledge transfer and support
+stakeholder_communication,Stakeholder Communication,Effectively communicating with and managing stakeholder expectations
+conflict_resolution,Conflict Resolution,Resolving conflicts and disputes in professional settings effectively
+ecommerce,E-Commerce,Online buying and selling of goods and services
+saas_domain,SaaS,Software licensing and delivery model with central hosting
+startup_experience,Startup Experience,"Experience working in startup environments (seed to Series B), dealing with ambiguity, rapid change, and resource constraints"
