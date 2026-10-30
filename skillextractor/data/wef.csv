@@ -1,0 +1,82 @@
+﻿id,name,description
+wef.1,Dexterity,Dexterity
+wef.2,Strength and stamina,Strength and stamina
+wef.3,Flexibility and coordination,Flexibility and coordination
+wef.4,Visual abilities,Visual abilities
+wef.5,Auditory abilities,Auditory abilities
+wef.6,Information-processing abilities,Information-processing abilities
+wef.7,Spatial abilities,Spatial abilities
+wef.8,Creative thinking,Creative thinking
+wef.9,Analytical thinking,Analytical thinking
+wef.10,Systems thinking,Systems thinking
+wef.11,Number facility,Number facility
+wef.12,Calculating and estimating,Calculating and estimating
+wef.13,Algebraic facility,Algebraic facility
+wef.14,Data analysis and mathematical modelling,Data analysis and mathematical modelling
+wef.15,Reading,Reading
+wef.16,Speaking,Speaking
+wef.17,Writing,Writing
+wef.18,Editing,Editing
+wef.19,Multi-lingualism,Multi-lingualism
+wef.20,Skill evaluation,Skill evaluation
+wef.21,Talent planning and development,Talent planning and development
+wef.22,Coordination and time management,Coordination and time management
+wef.23,Project management,Project management
+wef.24,Supply-chain management,Supply-chain management
+wef.25,Accounting,Accounting
+wef.26,Finance,Finance
+wef.27,Quality assurance,Quality assurance
+wef.28,Quality control,Quality control
+wef.29,Risk management,Risk management
+wef.30,"Sales, communication and marketing of products and services","Sales, communication and marketing of products and services"
+wef.31,Digital marketing,Digital marketing
+wef.32,Customer service,Customer service
+wef.33,Customer relationship management,Customer relationship management
+wef.34,Collaboration and productivity software,Collaboration and productivity software
+wef.35,Manufacturing technologies,Manufacturing technologies
+wef.36,Installation,Installation
+wef.37,Functional programming,Functional programming
+wef.38,Object-oriented programming,Object-oriented programming
+wef.39,Computational thinking,Computational thinking
+wef.40,Human-technology interaction,Human-technology interaction
+wef.41,Mobile development,Mobile development
+wef.42,Web development,Web development
+wef.43,Computer hardware and networking,Computer hardware and networking
+wef.44,Cybersecurity and application security,Cybersecurity and application security
+wef.45,Cloud computing,Cloud computing
+wef.46,Data mining,Data mining
+wef.47,Supervised learning,Supervised learning
+wef.48,Unsupervised learning,Unsupervised learning
+wef.49,Internal self-awareness,Internal self-awareness
+wef.50,External self-awareness,External self-awareness
+wef.51,Self-control,Self-control
+wef.52,Working independently,Working independently
+wef.53,Initiative,Initiative
+wef.54,Curiosity,Curiosity
+wef.55,Willingness to learn,Willingness to learn
+wef.56,Meeting commitments and deadlines,Meeting commitments and deadlines
+wef.57,Time management and prioritisation,Time management and prioritisation
+wef.58,Attention to detail,Attention to detail
+wef.59,Assuming responsibility,Assuming responsibility
+wef.60,Frustration management,Frustration management
+wef.61,Stress management,Stress management
+wef.62,Adaptation to change,Adaptation to change
+wef.63,Persistence,Persistence
+wef.64,Empathy,Empathy
+wef.65,Asking questions,Asking questions
+wef.66,Giving and receiving feedback,Giving and receiving feedback
+wef.67,Following instructions and procedures,Following instructions and procedures
+wef.68,Assisting and supporting co-workers,Assisting and supporting co-workers
+wef.69,Teaching,Teaching
+wef.70,Mentoring,Mentoring
+wef.71,Coaching,Coaching
+wef.72,Persuasion and negotiation,Persuasion and negotiation
+wef.73,"Liaising, networking and exchanging information","Liaising, networking and exchanging information"
+wef.74,Building trust,Building trust
+wef.75,Ethical leadership,Ethical leadership
+wef.76,Social justice,Social justice
+wef.77,Social-cultural awareness,Social-cultural awareness
+wef.78,Technology ethics,Technology ethics
+wef.79,Environmental awareness,Environmental awareness
+wef.80,Sustainable and efficient resource usage,Sustainable and efficient resource usage
+wef.81,Adopting green technologies,Adopting green technologies
